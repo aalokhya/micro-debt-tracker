@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FairShare - Balances</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ 
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <h1 class="site-title">FairShare</h1>
+      <p class="site-subtitle">View how much each user owes or is owed</p>
+    </div>
+
+    <h2>Balances</h2>
+
+    {% if balances %}
+      <table class="balances-table">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for balance in balances %}
+            <tr>
+              <td>{{ balance.lender }}</td>
+              <td>{{ balance.borrower }}</td>
+              <td>₹{{ '%.2f'|format(balance.amount_owed) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No balances to show.</p>
+    {% endif %}
+
+    <nav>
+      <a href="/">Home</a> |
+      <a href="/expenses">Add Expenses</a> |
+      <a href="/summary">Summary</a>
+    </nav>
+  </div>
+</body>
+</html>

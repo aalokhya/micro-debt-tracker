@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summary</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <h1 class="site-title">FairShare</h1>
+      <p class="site-subtitle">Summary of user balances</p>
+    </div>
+
+    {% if summary is iterable and summary|length > 0 and summary[0] is mapping %}
+      {% for user in summary %}
+        <div class="user-summary">
+          <p><strong>User ID:</strong> {{ user.user_id }}</p>
+          <p><strong>Name:</strong> {{ user.name }}</p>
+          <p><strong>Total Paid:</strong> {{ user.total_paid }}</p>
+          <p><strong>Total Owed:</strong> {{ user.total_owed }}</p>
+          <p>
+            <strong>Net Balance:</strong> 
+            {% if user.net_balance >= 0 %}
+              <span class="net-positive">+{{ user.net_balance }}</span>
+            {% else %}
+              <span class="net-negative">{{ user.net_balance }}</span>
+            {% endif %}
+          </p>
+          <!-- EDIT BUTTON -->
+          <p><a href="{{ url_for('edit_summary', user_id=user.user_id) }}" class="edit-link">Edit</a></p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <ul>
+        {% if summary is mapping %}
+          {% for key, value in summary.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+          {% endfor %}
+        {% else %}
+          {% for item in summary %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    {% endif %}
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/expenses">Add Expenses</a>
+    </nav>
+  </div>
+</body>
+</html>
