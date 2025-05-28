@@ -4,13 +4,17 @@ import mysql.connector
 app = Flask(__name__)
 
 # Database connection
+import os
+import mysql.connector
+
 db = mysql.connector.connect(
-    host="127.0.0.1",
-    port=3306,
-    user="chinni",
-    password="aalokhya8",
-    database="microdebt"
+    host=os.environ.get("DB_HOST"),
+    port=int(os.environ.get("DB_PORT", 3306)),
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    database=os.environ.get("DB_NAME")
 )
+
 
 cursor = db.cursor(dictionary=True)
 
