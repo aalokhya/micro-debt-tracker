@@ -25,6 +25,9 @@ See it in action here:
 
 ## 📸 Screenshots
 
+![Micro Debt Tracker Screenshot](Screenshot1.png)
+
+
 *Showing the power behind the scenes — strong database skills on display!*
 
 
