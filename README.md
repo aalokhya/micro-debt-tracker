@@ -33,7 +33,7 @@ See it in action here:
 
 *Showing the power behind the scenes — strong database skills on display!*
 
-![Database Schema]("C:\Users\pc\OneDrive\Desktop\Micro-Debt Tracker\Screenshot1.png")
+![Database Schema]("OneDrive/Desktop/Micro-Debt Tracker/screenshots/Screenshot1 (1).png")
 *MySQL tables handling debts and payments*
 
 ![Main Page](path_to_screenshot2.png)
