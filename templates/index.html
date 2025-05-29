@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FairShare - Users</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <h1 class="site-title">FairShare</h1>
+      <p class="site-subtitle">Split bills, not friendships.</p>
+    </div>
+
+    <h2>Roommates / Users</h2>
+    <form action="/add-user" method="POST" class="add-user-form">
+      <input type="text" name="name" placeholder="Add new user name" required />
+      <button type="submit">Add User</button>
+    </form>
+
+    <h3>All Users</h3>
+    <ul class="user-list">
+      {% for user in users %}
+        <li class="user-item">
+          <span>{{ user.name }}</span>
+          <form action="/delete-user/{{ user.user_id }}" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </li>
+      {% else %}
+        <li>No users added yet.</li>
+      {% endfor %}
+    </ul>
+
+    <nav>
+      <a href="/expenses">Add Expenses</a>
+      <a href="/balances">View Balances</a>
+      <a href="/summary">Summary</a>
+    </nav>
+  </div>
+</body>
+</html>

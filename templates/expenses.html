@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <h1 class="site-title">FairShare</h1>
+      <p class="site-subtitle">Add a new shared expense</p>
+    </div>
+
+    <form action="/add-expense" method="POST" class="add-user-form">
+      <label for="description"><strong>Description:</strong></label>
+      <input type="text" name="description" id="description" required>
+
+      <label for="amount"><strong>Amount:</strong></label>
+      <input type="number" step="0.01" name="amount" id="amount" required>
+
+      <label for="paid_by"><strong>Paid By:</strong></label>
+      <select name="paid_by" id="paid_by" required>
+        {% for user in users %}
+        <option value="{{ user.user_id }}">{{ user.name }}</option>
+        {% endfor %}
+      </select>
+
+      <label><strong>Involved Users:</strong></label>
+      <div>
+        {% for user in users %}
+        <label>
+          <input type="checkbox" name="involved_users" value="{{ user.user_id }}" checked>
+          {{ user.name }}
+        </label>
+        {% endfor %}
+      </div>
+
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/balances">View Balances</a>
+      <a href="/summary">Summary</a>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit User Summary</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+      <h1 class="site-title">FairShare</h1>
+      <p class="site-subtitle">Edit User Summary</p>
+    </div>
+
+    <form action="/edit-summary/{{ user.user_id }}" method="POST" class="add-user-form">
+      <!-- User ID: show but disable editing -->
+      <label for="user_id"><strong>User ID:</strong></label>
+      <input type="text" id="user_id" name="user_id" value="{{ user.user_id }}" readonly>
+
+      <label for="name"><strong>Name:</strong></label>
+      <input type="text" id="name" name="name" value="{{ user.name }}" required>
+
+      <label for="total_paid"><strong>Total Paid:</strong></label>
+      <input type="number" step="0.01" id="total_paid" name="total_paid" value="{{ user.total_paid }}" required>
+
+      <label for="total_owed"><strong>Total Owed:</strong></label>
+      <input type="number" step="0.01" id="total_owed" name="total_owed" value="{{ user.total_owed }}" required>
+
+      <label for="net_balance"><strong>Net Balance:</strong></label>
+      <input type="number" step="0.01" id="net_balance" name="net_balance" value="{{ user.net_balance }}" required>
+
+      <button type="submit">Save Changes</button>
+    </form>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/balances">View Balances</a>
+      <a href="/summary">Summary</a>
+      <a href="/expenses">Expenses</a>
+    </nav>
+  </div>
+</body>
+</html>
