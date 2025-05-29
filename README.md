@@ -28,16 +28,14 @@ See it in action here:
 ### 1. Database Schema
 ![Database Schema](Screenshot1.png)
 
-### 2. UI Screenshot 1
+### 2. Home Page
 ![Home Page](Screenshot2.png)
 
-### 3. UI Screenshot 2
+### 3. Add Expense Page
 ![Add Expense Page](Screenshot3.png)
 
-### 4. UI Screenshot 3
+### 4. Summary Page
 ![Summary Page](Screenshot4.png)
-
-*Showing the power behind the scenes — strong database skills on display!*
 
 > ⚠️ *Note:* This project highlights **database and backend skills**. The UI is intentionally minimal to keep the focus where it counts.
 
