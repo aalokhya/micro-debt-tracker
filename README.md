@@ -23,6 +23,8 @@ Welcome to **Micro Debt Tracker**, a sleek little web app built with **Flask**, 
 See it in action here:
 🔗 https://aalokhya.pythonanywhere.com/
 
+> ⚠️ *Note:* This platform is hosted on a free PythonAnywhere 30-day trial. It may sometimes experience downtime or minor errors due to free-tier limitations, but it effectively demonstrates the main functionality and database skills.
+
 ## Screenshots 📸
 
 ### 1. Database Schema
