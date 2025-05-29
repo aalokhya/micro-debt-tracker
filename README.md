@@ -58,5 +58,3 @@ This Micro Debt Tracker is a perfect example of crafting a **functional backend 
 
 Have questions or ideas?
 Let’s connect! 😊
-
-Would you like me to help with setup or usage instructions too?
