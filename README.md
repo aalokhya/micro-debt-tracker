@@ -10,8 +10,6 @@ Welcome to **Micro Debt Tracker**, a sleek little web app built with **Flask**, 
 * ☁️ Deployed on **PythonAnywhere** — access it anytime, anywhere!
 * 🔓 No login or user hassles — jump straight into debt tracking
 
----
-
 ## 🌟 Highlights
 
 * ✅ Pure backend & database showcase — built to impress with clean logic
@@ -20,14 +18,10 @@ Welcome to **Micro Debt Tracker**, a sleek little web app built with **Flask**, 
 * 📊 Focus on accurate debt & payment management
 * 🔥 No distractions like login pages or complex flows — just the essentials
 
----
-
 ## 🌍 Live Demo
 
 See it in action here:
 🔗 https://aalokhya.pythonanywhere.com/
-
----
 
 ## 📸 Screenshots
 
