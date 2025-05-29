@@ -2,19 +2,23 @@ from flask import Flask, render_template, request, redirect
 import mysql.connector
 
 app = Flask(__name__)
-
+# uses pythonanywhere which is PythonAnywhere is a cloud-based platform that lets you run and host Python applications
+#  https://www.pythonanywhere.com/user/Aalokhya/
 # Database connection
-import os
-import mysql.connector
-
+''' db = mysql.connector.connect(
+    host="127.0.0.1",
+    port=3306,
+    user="root",
+    password="A@lokhya8",
+    database="microdebt"
+) '''
 db = mysql.connector.connect(
-    host=os.environ.get("DB_HOST"),
-    port=int(os.environ.get("DB_PORT", 3306)),
-    user=os.environ.get("DB_USER"),
-    password=os.environ.get("DB_PASSWORD"),
-    database=os.environ.get("DB_NAME")
+    host="Aalokhya.mysql.pythonanywhere-services.com",
+    user="Aalokhya",
+    password = "chinni9866",        # The password you just set
+    database="Aalokhya$default",          # Your username + $ + database name
+    port=3306
 )
-
 
 cursor = db.cursor(dictionary=True)
 
@@ -188,6 +192,4 @@ def edit_expense(expense_id):
         return render_template('edit_expense.html', expense=expense, users=users, involved_user_ids=involved_user_ids)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=True)
-
+    app.run(debug=True)
