@@ -27,17 +27,8 @@ See it in action here:
 
 *Showing the power behind the scenes — strong database skills on display!*
 
-![Database Schema](images/Screenshot1.png)
-
-
-*MySQL tables handling debts and payments*
-
-![Main Page](iamges/screenshot2.png)
-*Clean, simple interface showing core debt tracking features*
 
 > ⚠️ *Note:* This project highlights **database and backend skills**. The UI is intentionally minimal to keep the focus where it counts.
-
----
 
 ## 🛠️ Tech Stack
 
@@ -48,19 +39,13 @@ See it in action here:
 | 🎨 HTML & CSS     | Simple, clean front-end design |
 | ☁️ PythonAnywhere | Cloud deployment & hosting     |
 
----
-
 ## 💡 Why This Project?
 
 This Micro Debt Tracker is a perfect example of crafting a **functional backend app** with strong database integration — ideal for showcasing your **Flask routing, SQL handling, and cloud deployment skills**. No fuss, no fluff, just powerful core functionality.
-
----
 
 ## ✉️ Get In Touch
 
 Have questions or ideas?
 Let’s connect! 😊
-
----
 
 Would you like me to help with setup or usage instructions too?
