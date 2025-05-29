@@ -32,7 +32,7 @@ See it in action here:
 
 *MySQL tables handling debts and payments*
 
-![Main Page](path_to_screenshot2.png)
+![Main Page](iamges/screenshot2.png)
 *Clean, simple interface showing core debt tracking features*
 
 > ⚠️ *Note:* This project highlights **database and backend skills**. The UI is intentionally minimal to keep the focus where it counts.
