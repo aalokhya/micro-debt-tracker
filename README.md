@@ -23,13 +23,21 @@ Welcome to **Micro Debt Tracker**, a sleek little web app built with **Flask**, 
 See it in action here:
 🔗 https://aalokhya.pythonanywhere.com/
 
-## 📸 Screenshots
+## Screenshots 📸
 
-![Micro Debt Tracker Screenshot](Screenshot1.png)
+### 1. Database Schema
+![Database Schema](Screenshot1.png)
 
+### 2. UI Screenshot 1
+![Home Page](Screenshot2.png)
+
+### 3. UI Screenshot 2
+![Add Expense Page](Screenshot3.png)
+
+### 4. UI Screenshot 3
+![Summary Page](Screenshot4.png)
 
 *Showing the power behind the scenes — strong database skills on display!*
-
 
 > ⚠️ *Note:* This project highlights **database and backend skills**. The UI is intentionally minimal to keep the focus where it counts.
 
